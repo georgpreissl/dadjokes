@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "List of bad jokes",
   "author": "Georg Preissl",
-  "private": true,
+  "private": false,
+  "homepage": "https://georgpreissl.github.io/dadjokes/",  
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "@nuxtjs/axios": "^5.3.6",
+    "gh-pages": "^2.2.0",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {}
 }
